@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //even number
+          var arr=[1,2,3,4,5,6,7,8,9,10];
+           var arr2= arr.filter(num=>num%2===0);
+           console.log('This is even number'+arr2);  
+     // ---------------------------------------------------------
+
+        //count how many even number
+           var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+            var count=0;
+            for(let i=0;i<arr.length;i++){
+              if (arr[i] % 2===0){
+                count++;
+              }
+            }
+            console.log(count);  
+    //   ------------------------------------------------------------    
+
+        //sum of all 
+         var arr = [1,2,3,4,5];
+         let sum = 0 
+         for (let i = 0; i < arr.length; i += 1){
+               sum += arr[i]
+            }
+              console.log(sum);   
+    // ---------------------------------------------------------------------------         
+
+
+     // find the second largest num
+           var  arr= [10,20,30,40,50];
+            arr2=Math.max(...arr);
+            arr3=arr.indexOf(arr2);
+            arr.splice(arr3,1);
+            arr5=Math.max(...arr);
+            console.log(arr5);      
+    // -------------------------------------------------------------------------
+
+
+    // remove duplicate
+        var arr = [1,2,3,4,5,1,2,3,7,8,6,9];
+        var arr2  = [...new Set(arr)];
+        console.log(arr2);    
+    //----------------------------------------------------------------
+
+
+    // print the first non-repeated
+        var arr = [1,2,3,2,4,1,3];
+        var res = arr.find(e => arr.indexOf(e) === arr.lastIndexOf(e));
+        console. log(res)  
+    //----------------------------------------------------------------------
+
+      
+    //array has duplicate or not
+        const arr8 = [1,2,3,4,5];
+        function checkDuplicate(array) {
+            if (array.length !== new Set(array).size) {
+                return true;
+            }
+            return false;
+        }
+        console.log(checkDuplicate(arr8));    
+    //--------------------------------------------------------------
+
+
+    // common elements 
+        const arr1 = [1, 2, 3, 4];
+        const arr2 = [2, 3, 4, 5];
+        const commonElements = arr1.filter((element) => {
+        return arr2.includes(element);
+        });
+        console.log(commonElements);
+    //-------------------------------------------------------       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // employees = [
+        // { eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+        // { eId: 102, name: "Amit", sal: 6000, gender: "male" },
+        // { eId: 103, name: "Deepak", sal: 7000, gender: "male" },
+        // { eId: 104, name: "Sonali", sal: 8000, gender: "female" },
+        // ];
+        // employees.map((emp)=>{
+        //     if (emp.gender =='male')
+        //     emp.name ='Mr.'+emp.name;
+        //     else
+        //     emp.name='Miss.'+emp.name
+        //     // return emp;
+        // })
+        // // console.log(employees);
+        // document.write(JSON.stringify(employees));
+
+    </script>
+</body>
+
+</html>

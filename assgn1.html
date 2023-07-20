@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //reverse word
+            var str= "This is javascript class";
+            var rev=str.split(' ').reverse().join(' ');
+            document.write(rev);  
+            //-------------------------------------
+
+            //reverse string
+            var str= "sachin";
+            var rev=str.split('').reverse().join('');
+            document.write(rev);  
+           //--------------------------------------
+
+           //tittle case
+            var str="this is javascript class";
+            var str2=str.split(' ').map((word)=>{
+                return word[0].toLocaleUpperCase()+word.slice(1);
+            }).join(' ')
+            document.write(str2);   
+            //--------------------------------
+   
+
+            //account number
+            var input=prompt('enter your account number');
+             function myFunction(input){
+                var output="";
+                output=input.slice(0,2)+'********'+input.slice(9);
+                return output;
+             }
+             result=myFunction(input);
+             document.write(result);
+             //---------------------------------------
+
+             
+             //Anagram
+            function thisA(str1,str2){
+                let x=str1.split("").sort().join('');
+                let y=str2.split("").sort().join('');
+                return x===y
+            }
+            document.write(thisA('listen','silent')); 
+        //---------------------------------------------
+
+         //Credit-card number
+            var input='1111222233334444';
+            result=input.match(/.{1,4}/g).join('-');
+            document.write(result); 
+         //------------------------------------------
+
+         // remove special character
+             var a="hello@#hi&";
+        var b=a.replace(/[^a-zA-Z0-9]/g,'')
+        document.write(b);  
+        //----------------------------------------
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
