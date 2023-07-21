@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+
+           var x = 'Odisha';
+        function show(){
+            var a = 'i am ajit';
+            function innerFun(){
+            var b = 'i am from Berhampur';
+            document.write(a + '<br>');  // outer function scope
+            document.write(b + '<br>');  // local or own scope
+            document.write(x + '<br>');  //global scope
+            }
+            innerFun();
+             // document.write(b + '<br>'); // b is not define
+            // document.write(x); // u can call any where bcz its global
+        }
+        show();
+    </script>
+</body>
+</html>
