@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let s=+prompt('enter seat number');
+
+
+        function seat(s){
+            if (s > 0 && s < 73)
+            if(s % 8 == 1 || s % 8 == 4)
+            document.write(s + " is lower berth" + "<br>");
+        
+            else if (s % 8 == 2 || s % 8 == 5)
+            document.write(s + " is middle berth" + "<br>");
+
+            else if (s % 8 == 3 || s % 8 == 6)
+            document.write(s + " is upper berth" + "<br>");
+
+            else if (s % 8 == 7)
+            document.write(s + " is side lower" + "<br>");
+
+            else 
+            document.write(s + " is side upper" + "<br>");
+
+            else 
+            document.write (s + " invalid seat number" + "<br"); 
+        };
+        seat(s);
+
+    </script>
+</body>
+</html>
